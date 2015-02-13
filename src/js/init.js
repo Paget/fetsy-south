@@ -1,1 +1,1 @@
-app.showInitialPage();
+app.showFetsylistings();

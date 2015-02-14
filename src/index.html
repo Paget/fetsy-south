@@ -20,7 +20,8 @@
 
     <% m.stores.forEach(function(store) { %>
       <div class="store-info">
-        <h3 class="store-title"><%- store.title %></h3>
+        <h3 class="item-title"><%- store.title %></h3>
+        <p class="item-description"><%- store.description %></p>
         <div class="store-info__pic">
           <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
         </div>

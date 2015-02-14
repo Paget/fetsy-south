@@ -1,5 +1,6 @@
 .wrapper {
 @include outer-container;
-.primary { @include span-columns(8); }
-.secondary { @include span-columns(4); }
+.store-info { @include span-columns(6); }
+.store-pic { @include span-columns(4); }
+.local-stores { @include span-columns(2);}
 }

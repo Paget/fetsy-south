@@ -8,50 +8,30 @@
 </head>
 <body>
 
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-
-
-
-
   <h1>Fetsy Fun!</h1>
-  <p>
+  <h2>
     This is where you can explore the latest and greatest DIY!
-  </p>
-  <p>
-    Keep it real yo yo yo yo.
-  </p>
+  </h2>
 
-  <section class="wrapper">
-    <article class="primary">Neat is an open source semantic grid framework
-      built on top of Sass and Bourbon&hellip;
-      Plaid university central park microbrew marry durham merge records bulltown strutters trinity park, the west end liberty underground the park corcoran.
+<div class="container"></div>
 
-Juneteenth old five points fifteen five oh one forest hills durham mag bullcity urban farmer foodie train oprah building the park 147, biker bar third fridays marry durham yoga southsquare north durham plaid parrish street triangle localista nasher. Walltown art of cool coffee durham freeway nc central, rigsbee duke chapel one forty seven. Lemurs french press hub d-town north east baseball edgemont food truck hayti, alt-country partner dance brick ccb plaza upcycled the eleanor, bulltown strutters gregson street the boulevard local dapper major adf.
+  <script type="text/html" id="southern-stores">
+    <section class="wrapper">
 
-Durham freeway fifty-five nc central startup stampede community, fayetville street durham freeway. Saint joseph's the eleanor french press beer pizza yoga broad street the state of things, startup stampede the state of things cupcakes underground lakewood hub start-up morehead hills, duke park miami boulevard dirty durham start-up one forty seven oprah building. Chapel hill street bullcity lakewood upcycled music on the lawn oprah building main street seeds, skate park rigsbee northeast central luewwd durham mag. Nanobrew festival for the eno upcycled world beer festival downtown the park coffee centerfest, bull durham fifteen five oh one alt-country durham freeway central park bulltown strutters, science and math history hub innovation duke chapel the kress watts-hillandale.
+    <% m.stores.forEach(function(store) { %>
+      <div class="store-info">
+        <h3 class="store-title"><%- store.title %></h3>
+        <div class="store-info__pic">
+          <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
+        </div>
+      </div>
+    <% }) %>
 
-Farmer's market start-up dapper bulltown strutters northgate park nc central locavore biker bar plaid skate park, listserv mountain goats southsquare french press old north innovation train. Bicycle tour de fat craft cocktail duke lemurs d-town the eleanor, seeds fixie eno river carolina theatre fifteen five oh one, walltown bull seeds adf black wall street.
-
-Alt-country authentic foodie brick, creative class old five points, duke bimbe.</article>
-      <aside class="secondary">Discover more at neat.bourbon.io
-
+    <aside class="local-stores"></aside>
 
 
-Select All Text	Submit your own Cat Ipsum copy!
-
-
-
-Sweet beast bathe private parts with tongue then lick owner's face but ears back wide eyed caticus cuteicus. Present belly, scratch hand when stroked missing until dinner time, so stare at ceiling. Make muffins inspect anything brought into the house chase laser yet shake treat bag, so love to play with owner's hair tie purr while eating so give attitude. Claw drapes hide at bottom of staircase to trip human. Then cats take over the world climb leg attack feet, and has closed eyes but still sees you for meowing non stop for food.
-
-Rub face on everything cat snacks caticus cuteicus so chew iPad power cord missing until dinner time peer out window, chatter at birds, lure them to mouth but leave fur on owners clothes. Hate dog shove bum in owner's face like camera lens yet curl into a furry donut pooping rainbow while flying in a toasted bread costume in space. Eat a plant, kill a hand bathe private parts with tongue then lick owner's face and purr while eating, or throwup on your pillow. Under the bed hiss at vacuum cleaner stare at ceiling, but jump off balcony, onto stranger's head. Chase red laser dot attack feet chew foot, yet hide when guests come over ears back wide eyed. Caticus cuteicus. All of a sudden cat goes crazy. Chase dog then run away. I like big cats and i can not lie use lap as chair, or hopped up on catnip. Mark territory climb leg leave dead animals as gifts, so nap all day, but intrigued by the shower, yet stretch throwup on your pillow. Hopped up on catnip kick up litter. Jump off balcony, onto stranger's head chase laser so favor packaging over toy meowing non stop for food or hiss at vacuum cleaner. Need to chase tail. Chew on cable plan steps for world domination. Have secret plans chase laser chase laser or stretch, so purr while eating jump launch to pounce upon little yarn mouse, bare fangs at toy run hide litter box until treats are fed. Always hungry peer out window, chatter at birds, lure them to mouth need to chase tail, or cough furball. Swat at dog jump launch to pounce upon little yarn mouse, bare fangs at toy run hide litter box until treats are fed so jump launch to pounce upon little yarn mouse, bare fangs at toy run hide litter box until treats are fed, yet scamper sleep on keyboard ears back wide eyed claws in your leg. Hate dog need to chase tail, but purr for no reason, swat at dog roll on the floor purring your whiskers off but mark territory, and sweet beast. Sit by the fire leave dead animals as gifts. Intrigued by the shower knock over christmas tree, pooping rainbow while flying in a toasted bread costume in space find something else more interesting. Loves cheeseburgers chase imaginary bugs, if it fits, i sits chase dog then run away and use lap as chair. Destroy couch have secret plans or chase mice claws in your leg loves cheeseburgers and i like big cats and i can not lie roll on the floor purring your whiskers off. Eat and than sleep on your face chew on cable chase dog then run away behind the couch hiss at vacuum cleaner. Stare at the wall, play with food and get confused by dust.
-
-Inspect anything brought into the house missing until dinner time, hide from vacuum cleaner behind the couch, and hate dog use lap as chair. Run in circles jump off balcony, onto stranger's head favor packaging over toy plan steps for world domination see owner, run in terror then cats take over the world. Chase red laser dot find something else more interesting make meme, make cute face. See owner, run in terror. Play riveting piece on synthesizer keyboard stare at ceiling behind the couch, yet purr while eating and bathe private parts with tongue then lick owner's face but missing until dinner time. </aside>
   </section>
-
-  </div>
+  </script>
 
   <script src="js/vendor.js"></script>
   <script src="js/app.js"></script>

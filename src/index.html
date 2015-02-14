@@ -20,19 +20,17 @@
 
     <% m.stores.forEach(function(store) { %>
       <div class="store-info">
-        <h3 class="item-title"><%- store.title %></h3>
-        <p class="item-description"><%- store.description %></p>
+        <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
+        <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p>
         <div class="store-info__pic">
           <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
         </div>
       </div>
     <% }) %>
 
-    <aside class="local-stores"></aside>
-
-
   </section>
   </script>
+  <aside class="local-stores"></aside>
 
   <script src="js/vendor.js"></script>
   <script src="js/app.js"></script>

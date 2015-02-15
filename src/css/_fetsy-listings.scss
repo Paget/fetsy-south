@@ -1,6 +1,34 @@
 body {
-@include outer-container;
-.wrapper { @include span-columns(8); }
-// .store-pic { @include span-columns(4); }
-.local-stores { @include span-columns(4;}
+  font-family: sans-serif;
+  padding: 1em;
+}
+
+.fetsy-south {
+  background: #4b1d1d;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 1.5em;
+   h1 {
+     font-size: 30px;
+   }
+    h2 {
+       font-family: serif;
+       font-size: 20px;
+    }
+}
+
+
+
+
+.wrapper {
+  @include outer-container;
+  .store-info {
+    @include span-columns(6);
+  }
+  .local-stores {
+    @include span-columns(4);
+  }
 }

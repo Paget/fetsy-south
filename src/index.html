@@ -14,10 +14,6 @@
 
 <div class="outer-container">
 
-  <!-- <aside ="stores-to-visit">
-    Out and about!
-  </aside> -->
-
   <div class="container"></div>
 
     <script type="text/html" id="southern-stores">
@@ -36,10 +32,54 @@
         </div>
       <% }) %>
 
+    </section>
+    </script>
+
+  <div class="container2"></div>
+
+    <script type="text/html" id="southern-stores2">
+      <section class="wrapper">
+        <div class="local-stores">
+          <h1>Georgia</h1>
+        </div>
+
+      <% m.stores.forEach(function(store) { %>
+        <div class="store-info">
+          <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
+          <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
+          <div class="store-info__pic" data-listing-id="<%= store.listing_id %>">
+            <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
+          </div>
+        </div>
+      <% }) %>
 
     </section>
     </script>
+
+  <div class="container3"></div>
+
+    <script type="text/html" id="southern-stores3">
+      <section class="wrapper">
+        <div class="local-stores">
+          <h1>Arkansas</h1>
+        </div>
+
+      <% m.stores.forEach(function(store) { %>
+        <div class="store-info">
+          <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
+          <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
+          <div class="store-info__pic" data-listing-id="<%= store.listing_id %>">
+            <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
+          </div>
+        </div>
+      <% }) %>
+
+    </section>
+  </script>
+
 </div>
+
+
 
   <script src="js/vendor.js"></script>
   <script src="js/app.js"></script>

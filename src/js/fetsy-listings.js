@@ -24,4 +24,41 @@ app.showFetsyListings = function () {
       console.log(data);
     })
   });
+
+//georgia
+  var southernStores2 = $('#southern-stores2').html();
+  var storeTemplate2 = _.template(southernStores2, {variable: 'm'});
+
+app.showFetsyListings2 = function () {
+  $.getJSON("https://openapi.etsy.com/v2/listings/active.js?includes=MainImage&geo_level=state&location=georgia&limit=8&api_key=08gz3o57xxzhamlkdgb8us19&callback=?")
+  .done(function(data) {
+    console.log(data);
+
+    $('.container2').html(storeTemplate2({
+      stores : data.results
+    }));
+
+  });
+
+};
+
+//arkansas
+
+  var southernStores3 = $('#southern-stores3').html();
+  var storeTemplate3 = _.template(southernStores3, {variable: 'm'});
+
+app.showFetsyListings3 = function () {
+  $.getJSON("https://openapi.etsy.com/v2/listings/active.js?includes=MainImage&geo_level=state&location=arkansas&limit=8&api_key=08gz3o57xxzhamlkdgb8us19&callback=?")
+  .done(function(data) {
+    console.log(data);
+
+    $('.container3').html(storeTemplate3({
+      stores : data.results
+    }));
+
+  });
+
+};
+
+
 })();

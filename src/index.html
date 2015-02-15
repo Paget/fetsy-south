@@ -9,31 +9,37 @@
 <body>
     <header class="fetsy-south">
       <h1>Fetsy South!</h1>
-        <h2>Explore the latest and greatest North Carolina DIY!</h2>
+        <h2>vintage goods &amp diy crafts from the american south</h2>
     </header>
 
-<div class="container"></div>
+<div class="outer-container">
 
-  <script type="text/html" id="southern-stores">
-    <section class="wrapper">
+  <!-- <aside ="stores-to-visit">
+    Out and about!
+  </aside> -->
 
-    <% m.stores.forEach(function(store) { %>
-      <div class="store-info">
-        <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
-        <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p>
-        <div class="store-info__pic">
-          <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
+  <div class="container"></div>
+
+    <script type="text/html" id="southern-stores">
+      <section class="wrapper">
+        <div class="local-stores">
+          <h1>North Carolina</h1>
         </div>
-      </div>
-    <% }) %>
 
-    <div class="local-stores">
-      <h1>NC Stores!</h1>
-    </div>
+      <% m.stores.forEach(function(store) { %>
+        <div class="store-info">
+          <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
+          <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
+          <div class="store-info__pic" data-listing-id="<%= store.listing_id %>">
+            <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
+          </div>
+        </div>
+      <% }) %>
 
-  </section>
-  </script>
 
+    </section>
+    </script>
+</div>
 
   <script src="js/vendor.js"></script>
   <script src="js/app.js"></script>

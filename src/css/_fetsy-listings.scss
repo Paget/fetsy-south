@@ -1,34 +1,67 @@
 body {
   font-family: sans-serif;
-  padding: 1em;
+  // padding: 1em;
+  font-family: 'Voltaire', sans-serif;
+}
+
+.outer-container {
+  margin-top: 250px;
+
 }
 
 .fetsy-south {
+  font-family: 'Special Elite', cursive;
   background: #4b1d1d;
   color: white;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  padding: 1.5em;
+  padding: 2.5em;
    h1 {
-     font-size: 30px;
+     font-size: 60px;
    }
     h2 {
-       font-family: serif;
-       font-size: 20px;
+      color: #54a2b6;
+       font-family: 'Voltaire', sans-serif;
+       font-size: 35px;
     }
 }
 
+.local-stores {
+  background: #e795ce;
+  height: 60px;
+  margin-bottom: 18px;
+    h1 {
+      font-family: 'Special Elite', cursive;
+      font-size: 28px;
+      padding-top: 18px;
+    }
+}
 
-
+.store-info h3 {
+  font-family: 'Voltaire', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
 
 .wrapper {
-  @include outer-container;
+  @include outer-container(80%);
+  $mobile: new-breakpoint(max-width 700px 1);
+  text-align: center;
   .store-info {
-    @include span-columns(6);
+    @include span-columns(3);
+    @include omega();
+    @include media($mobile) {
+    @include span-columns(1);
+}
+  .store-info__pic img {
+    @include size(75);
+    border-radius: 5%;
+    padding: 2px;
+    margin-bottom:  30px;
+    max-width: 100%;
   }
-  .local-stores {
-    @include span-columns(4);
   }
 }

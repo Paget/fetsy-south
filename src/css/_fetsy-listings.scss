@@ -9,6 +9,7 @@ body {
 
 }
 
+
 .fetsy-south {
   font-family: 'Special Elite', cursive;
   background: #4b1d1d;
@@ -29,13 +30,14 @@ body {
 }
 
 .local-stores {
-  background: #e795ce;
+  background: #54a2b6;
   height: 60px;
   margin-bottom: 18px;
     h1 {
       font-family: 'Special Elite', cursive;
       font-size: 28px;
       padding-top: 18px;
+      color: white;
     }
 }
 
@@ -63,5 +65,23 @@ body {
     margin-bottom:  30px;
     max-width: 100%;
   }
+  }
+}
+
+.outro {
+  margin: auto;
+  // padding-bottom: 15px;
+  // margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+  height: 40px00px;
+  background: url('http://s169923.gridserver.com/images/LightCylinder.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  h3 {
+    padding-top: 220px;
+    padding-bottom: 100px;
+    font-size: 40px;
+    color: white;
   }
 }

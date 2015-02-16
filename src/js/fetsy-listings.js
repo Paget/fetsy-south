@@ -1,4 +1,6 @@
 (function(){
+
+//north carolina  
   var southernStores = $('#southern-stores').html();
   var storeTemplate = _.template(southernStores, {variable: 'm'});
 

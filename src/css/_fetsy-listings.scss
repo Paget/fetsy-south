@@ -1,12 +1,27 @@
 body {
   font-family: sans-serif;
-  // padding: 1em;
   font-family: 'Voltaire', sans-serif;
 }
 
 .outer-container {
-  margin-top: 250px;
+  margin-top: 165px;
 
+}
+
+.intro {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: 320px;
+  background: url('http://s169923.gridserver.com/images/LightCylinder.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  h3 {
+    padding-top: 250px;
+    padding-bottom: 80px;
+    font-size: 40px;
+    color: white;
+  }
 }
 
 
@@ -32,7 +47,8 @@ body {
 .local-stores {
   background: #54a2b6;
   height: 60px;
-  margin-bottom: 18px;
+  margin-top: 45px;
+  margin-bottom: 30px;
     h1 {
       font-family: 'Special Elite', cursive;
       font-size: 28px;
@@ -70,11 +86,9 @@ body {
 
 .outro {
   margin: auto;
-  // padding-bottom: 15px;
-  // margin-bottom: 30px;
   text-align: center;
   width: 100%;
-  height: 40px00px;
+  height: 380px;
   background: url('http://s169923.gridserver.com/images/LightCylinder.jpg');
   background-attachment: fixed;
   background-size: cover;

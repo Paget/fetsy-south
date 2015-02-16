@@ -15,7 +15,7 @@
 <div class="outer-container">
 
     <div class="intro">
-      <h3>find the latest listings from Southern makers &amp doers</h3>
+      <h3>Discover the latest listings from the unique South.</h3>
     </div>
   </div>
 
@@ -82,8 +82,29 @@
     </section>
   </script>
 
+  <script type="text/html" id="store-details">
+    <section class="wrapper">
+      <div class="user-store">
+        <h1>Store Info</h1>
+      </div>
+
+    <% m.stores.forEach(function(store) { %>
+      <div class="store-info">
+        <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
+        <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
+        <div class="store-info__pic" data-listing-id="<%= store.listing_id %>">
+          <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
+        </div>
+      </div>
+    <% }) %>
+
+  </section>
+  </script>
+
+
+
   <div class="outro">
-    <h3>Discover the unique South.</h3>
+    <h3>Supporting Southern makers & doers since 2015.</h3>
   </div>
 </div>
 

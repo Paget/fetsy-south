@@ -82,26 +82,27 @@
     </section>
   </script>
 
-  <script type="text/html" id="store-details">
-    <section class="wrapper">
-      <div class="user-store">
-        <h1>Store Info</h1>
-      </div>
+  <script type="text/html" id="store-details-modal">
+    <div class="modal">
+      <label for="modal-1">
+        <div class="modal-trigger"></div>
+      </label>
+      <input class="modal-state" id="modal-1" type="checkbox" />
+      <div class="modal-window">
+        <div class="modal-inner">
+          <label class="modal-close" for="modal-1"></label>
+          <h1 class"item-title-modal"><%- _.unescape( _.trunc(m.store.login_name, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h1>
+      <!-- <p class="modal-intro"><%- _.unescape( _.trunc(m.store.description, { 'length': 80, 'separator': ' ' }) ) %></p> -->
+      <p class="modal-content">store name</p>
+      <p class="modal-content">store link</p>
+      <p class="modal-content">store location</p>
+    </div>
+  </div>
+</div>
 
-    <% m.stores.forEach(function(store) { %>
-      <div class="store-info">
-        <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
-        <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
-        <div class="store-info__pic" data-listing-id="<%= store.listing_id %>">
-          <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
-        </div>
-      </div>
-    <% }) %>
-
-  </section>
   </script>
 
-
+  <div class="modal-container"></div>
 
   <div class="outro">
     <h3>supporting southern makers & doers since 2015</h3>

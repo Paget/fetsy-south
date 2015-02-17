@@ -1,6 +1,6 @@
 (function(){
 
-//north carolina  
+//north carolina
   var southernStores = $('#southern-stores').html();
   var storeTemplate = _.template(southernStores, {variable: 'm'});
 
@@ -17,12 +17,14 @@ app.showFetsyListings = function () {
 
 };
 
-  $('.container').on("click", '.store-info__pic', function(){
-    console.log('hello');
+  $(document).on("click", '.store-info__pic', function(){
+
     var listing_id = $(this).data("listing-id");
-    console.log('listing id', listing_id);
+
     $.getJSON("https://openapi.etsy.com/v2/shops/listing/"+listing_id+".js?&api_key=08gz3o57xxzhamlkdgb8us19&callback=?")
     .done(function(data) {
+
+      app.showStoreModal(data);
       console.log(data);
     })
   });
@@ -63,4 +65,4 @@ app.showFetsyListings3 = function () {
 };
 
 
-})();
+})(jQuery);

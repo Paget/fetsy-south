@@ -1,7 +1,7 @@
-var r = Rlite();
+
 
 // Default route
-r.add('', function () {
+app.router.add('', function () {
     document.title = 'Fetsy Home';
     app.showFetsyListings();
     app.showFetsyListings2();
@@ -10,6 +10,7 @@ r.add('', function () {
 
 
 // #users/chris -> r.params.name will equal 'chris'
-r.add('users/:id', function (r) {
-    document.title = 'User ' + r.params.id;
+app.router.add('users/:id', function (users) {
+    document.title = 'User ' + users.params.id;
+    app.showFetsyProfile(users.params.id);
 });

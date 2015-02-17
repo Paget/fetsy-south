@@ -31,8 +31,8 @@
         <div class="store-info">
           <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
           <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
-          <div class="store-info__pic" data-listing-id="<%= store.listing_id %>">
-            <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
+          <div class="store-info__pic">
+            <a href="#users/<%- store.user_id %>"><img class="main-image" src=<%- store.MainImage.url_170x135 %>></a>
           </div>
         </div>
       <% }) %>
@@ -52,8 +52,8 @@
         <div class="store-info">
           <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
           <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
-          <div class="store-info__pic" data-listing-id="<%= store.listing_id %>">
-            <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
+          <div class="store-info__pic">
+            <a href="#users/<%- store.user_id %>"><img class="main-image" src=<%- store.MainImage.url_170x135 %>></a>
           </div>
         </div>
       <% }) %>
@@ -73,8 +73,8 @@
         <div class="store-info">
           <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
           <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
-          <div class="store-info__pic" data-listing-id="<%= store.listing_id %>">
-            <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
+          <div class="store-info__pic">
+            <a href="#users/<%- store.user_id %>"><img class="main-image" src=<%- store.MainImage.url_170x135 %>></a>
           </div>
         </div>
       <% }) %>
@@ -82,26 +82,41 @@
     </section>
   </script>
 
-  <script type="text/html" id="store-details">
+  <script type="text/html" id="user-profile">
     <section class="wrapper">
-      <div class="user-store">
-        <h1>Store Info</h1>
+      <div class="user-profile-header">
+        <h1>Fetsy South User Profile</h1>
       </div>
 
     <% m.stores.forEach(function(store) { %>
-      <div class="store-info">
+      <div class="user-info">
         <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
         <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
-        <div class="store-info__pic" data-listing-id="<%= store.listing_id %>">
-          <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
-        </div>
       </div>
     <% }) %>
 
   </section>
   </script>
 
+  <!-- in case decide to do modal or pop-up: -->
+    <!-- <script type="text/html" id="user-profile">
+      <section class="wrapper">
+        <div class="user-profile-header">
+          <h1>Fetsy South User Profile</h1>
+        </div>
 
+      <% m.stores.forEach(function(store) { %>
+        <div class="user-info">
+          <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
+          <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
+          <!-- <div class="store-info__pic" data-listing-id="<%= store.listing_id %>">
+            <img class="main-image" src=<%- store.MainImage.url_170x135 %>>
+          </div>
+        </div>
+      <% }) %>
+
+    </section>
+    </script> -->
 
   <div class="outro">
     <h3>supporting southern makers & doers since 2015</h3>

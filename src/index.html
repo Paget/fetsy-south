@@ -88,12 +88,15 @@
         <h1>Fetsy South User Profile</h1>
       </div>
 
-    <% m.stores.forEach(function(store) { %>
       <div class="user-info">
-        <h3 class="item-title"><%- _.unescape( _.trunc(store.title, { 'length': 25, 'separator': ' ', 'omission': '' }) ) %></h3>
-        <!-- <p class="item-description"><%- _.unescape( _.trunc(store.description, { 'length': 50, 'separator': ' ' }) ) %></p> -->
-      </div>
-    <% }) %>
+        <h3 class="user-name"><%- _.unescape(m.user.first_name + " " + m.user.last_name) %></h3>
+        <img class="user-pic" src=<%- m.user.image_url_75x75 %>></img>
+        <h3 class="user-bio"><%- _.unescape(m.user.bio) %></h3>
+        <p class="user-city"><%- _.unescape(m.user.city) %></p>
+        <p class="user-region"><%- _.unescape(m.user.region) %></p>
+        <p class="user-fav-materials"><%- _.unescape(m.user.materials) %></p>
+     </div>
+
 
   </section>
   </script>
@@ -117,6 +120,18 @@
 
     </section>
     </script> -->
+
+
+    <script type="text/html" id="page-not-found">
+      <section class="wrapper">
+
+          <h1>Ut oh! Fetsy Not Found!</h1>
+
+        <div class="404-page">
+        </div>
+
+    </section>
+    </script>
 
   <div class="outro">
     <h3>supporting southern makers & doers since 2015</h3>

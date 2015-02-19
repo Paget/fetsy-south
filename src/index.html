@@ -83,18 +83,25 @@
   </script>
 
   <script type="text/html" id="user-profile">
-    <section class="wrapper">
-      <div class="user-profile-header">
-        <h1>Fetsy South User Profile</h1>
-      </div>
+    <section>
+      <!-- <div class="user-profile-header">
+        <h2>Fetsy South Profile</h2>
+      </div> -->
 
       <div class="user-info">
+        <!-- <% if ((m.user.first_name ||  m.user.last_name) !== null) { %>
         <h3 class="user-name"><%- _.unescape(m.user.first_name + " " + m.user.last_name) %></h3>
-        <img class="user-pic" src=<%- m.user.image_url_75x75 %>></img>
-        <h3 class="user-bio"><%- _.unescape(m.user.bio) %></h3>
-        <p class="user-city"><%- _.unescape(m.user.city) %></p>
-        <p class="user-region"><%- _.unescape(m.user.region) %></p>
-        <p class="user-fav-materials"><%- _.unescape(m.user.materials) %></p>
+        <% } %> -->
+        <img class="user-pic" src=<%- m.user.image_url_75x75 %>>
+        <% if (m.user.first_name !== null) { %>
+        <h3 class="user-name"><%- _.unescape(m.user.first_name) %></h3>
+        <% } %>
+          <% if (m.user.last_name !== null) { %>
+        <h3 class="user-name"><%- _.unescape(m.user.last_name) %></h3>
+      <% } %>
+        <h3 class="user-bio"><span class="about">about: </span><%- _.unescape(m.user.bio) %></h3>
+        <p class="user-location"><span class="locale-info">location: </span> <%- m.user.city + "," + " " + m.user.region %></p>
+        <p class="user-fav-materials"><span class="fav-mat">favorite materials: </span> <%- _.unescape(m.user.materials) %></p>
      </div>
 
 

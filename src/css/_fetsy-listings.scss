@@ -67,15 +67,15 @@
     @include span-columns(3);
     @include omega();
     @include media($mobile) {
-    @include span-columns(1);
-}
-  .store-info__pic img {
-    @include size(75);
-    border-radius: 5%;
-    padding: 2px;
-    margin-bottom:  30px;
-    max-width: 100%;
-  }
+      @include span-columns(1);
+    }
+    .store-info__pic img {
+      @include size(75);
+      border-radius: 5%;
+      padding: 2px;
+      margin-bottom:  30px;
+      max-width: 100%;
+    }
   }
 }
 

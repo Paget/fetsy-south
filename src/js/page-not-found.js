@@ -5,4 +5,4 @@ app.pageNotFound = function () {
       $('.container').html(pageNotFoundTemplate());
       $('.container2').html('');
       $('.container3').html('');
-  }
+  };

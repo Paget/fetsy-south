@@ -1,5 +1,6 @@
 // This is where any explicit script odering should
 // be declared.
+
 module.exports = {
   app: [
     './src/js/app.js',

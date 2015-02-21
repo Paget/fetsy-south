@@ -14,4 +14,4 @@ $.getJSON("https://openapi.etsy.com/v2/users/"+userId+"/profile.js?&api_key=08gz
         console.log('user',data);
 
 });
-}
+};
